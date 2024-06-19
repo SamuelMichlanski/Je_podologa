@@ -37,3 +37,8 @@ p {
     text-indent: 10px;
     text-align: justify;
 }
+
+h3{
+    font-family: 'lora' , serif;
+    font-weight: 100;
+}
