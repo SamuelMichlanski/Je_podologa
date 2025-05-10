@@ -8,13 +8,23 @@
     <link rel="shortcut icon" href="image/Coroa e _M_ Vermelho Distintivos.png" type="image/x-icon">
 </head>
 <body>
-    <div class="navbar">
-        <div class="menu">☰</div>
-        <div class="titulo">
-            <img src="image/logo.pg.png" alt="">
-        </div>
-        <div style="width: 24px;"></div>
-      </div>
+ <!-- Sidebar -->
+ <div id="sidebar" class="sidebar">
+    <div><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">☰</a></div>
+    <a href="#">Home</a>
+    <a href="#">Sobre</a>
+    <a href="#">Serviços</a>
+    <a href="#">Contato</a>
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="menu" onclick="openNav()">☰</div>
+    <div class="titulo">
+        <img src="image/logo.pg.png" alt="">
+    </div>
+    <div style="width: 24px;"></div>
+</div>
 
       <div class="mimg">
           <div class="imagem-moldura">
@@ -37,7 +47,15 @@
         <button onclick="window.open('https://www.instagram.com/maycon_premiacoes?igsh=ZDBxdThvYnV4ajdv&utm_source=qr', '_blank')"> <img src="image/instagram.png" alt="">Instagram</button>
     </div>
 
-    <P>-</P>
+    <script>
+        function openNav() {
+            document.getElementById("sidebar").classList.add("open");
+        }
+    
+        function closeNav() {
+            document.getElementById("sidebar").classList.remove("open");
+        }
+    </script>
       
 
-    
+    </body>
