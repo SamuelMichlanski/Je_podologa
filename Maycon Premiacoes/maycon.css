@@ -272,10 +272,12 @@ width: 170px;
     }
   }
 
-  @media (hover: hover) {
-  .insta.button:hover {
+@media (hover: hover) and (pointer: fine) {
+  .insta button:hover {
     transform: scale(1.1);
+    transition: transform 0.3s ease;
   }
 }
+
 
 
