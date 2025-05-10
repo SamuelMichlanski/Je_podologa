@@ -183,11 +183,6 @@ width: 170px;
     border: 3px solid #f83324;
   }
 
-  .insta button:hover {
-    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
-}
-  
-
 .insta img {
     width: 30px; /* Largura da imagem */
     height: 30px; /* Altura da imagem */
