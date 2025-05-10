@@ -39,11 +39,6 @@ body {
 
 }
 
-.menu:hover {
-  transform: scale(1.2);
-  color: #ffffff; /* laranja suave no hover */
-}
-
 .sidebar {
   padding-top:70px;
   height: 100%;
@@ -58,11 +53,8 @@ body {
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
 }
 
-
-
 .sidebar a:hover {
 color: #ffffff;
-
 }
 
 .sidebar a {
@@ -178,6 +170,12 @@ width: 170px;
     transition: transform 0.3s ease;
     border: 3px solid #f83324;
   }
+  
+  .insta img {
+      width: 30px; /* Largura da imagem */
+      height: 30px; /* Altura da imagem */
+      margin-right: 20px;
+  }
 
   @media (hover: hover) and (pointer: fine) {
   .iphone button:hover {
@@ -194,10 +192,13 @@ width: 170px;
   }
 }
 
-.insta img {
-    width: 30px; /* Largura da imagem */
-    height: 30px; /* Altura da imagem */
-    margin-right: 20px;
+
+@media (hover: hover) and (pointer: fine) {
+  .menu:hover {
+    transform: scale(1.2);
+    color: #ffffff;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
 }
 
 /* Tablets: até 1024px */
