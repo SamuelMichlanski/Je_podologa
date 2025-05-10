@@ -31,23 +31,67 @@ body {
   font-size: 28px;
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease;
-  margin-left: 10px; /* Ajuste a posição horizontal */
+  z-index: 2001; /* maior que a sidebar */
+  position: fixed; /* FIXO na tela */
+  top: 25px;
+  left: 25px;
+  color:#818181;
+
 }
 
 .menu:hover {
-    transform: scale(1.2);
-    color: #FF6E40; /* laranja suave no hover */
+  transform: scale(1.2);
+  color: #ffffff; /* laranja suave no hover */
+}
+
+.sidebar {
+  padding-top:70px;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index:1000;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: width 0.5s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.sidebar a:hover {
+color: #ffffff;
+
+}
+
+.sidebar a {
+padding: 8px 8px 8px 25px;
+text-decoration: none;
+font-size: 25px;
+color: #818181;
+display: block;
+transition: 0.3s;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+/* Quando a sidebar estiver aberta */
+.sidebar.open {
+width: 170px;
 }
 
 .titulo {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
     height: 100%; /* Garantir que ocupe toda a altura da navbar */
+    width: 100%; /* Garante que ocupe toda a largura da navbar */
 }
 
 .titulo img {
     height: 300px;
+    object-fit: contain; /* Garante que a imagem seja redimensionada proporcionalmente */
 }
 
 .imagem-moldura {
@@ -228,48 +272,5 @@ body {
     }
   }
 
-  .closebtn{
- 
-  }
-
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 20px; /* Ajuste para dar um bom espaço no topo */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-}
-
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  left: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Quando a sidebar estiver aberta */
-.sidebar.open {
-  width: 250px;
-}
 
 
