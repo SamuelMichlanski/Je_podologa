@@ -186,7 +186,7 @@ width: 170px;
     color: #ffffff;
     transition: transform 0.3s ease, color 0.3s ease;
   }
-
+}
 
 /* Tablets: até 1024px */
 @media (max-width: 1024px) {
@@ -245,7 +245,7 @@ width: 170px;
     .iphone button{
       width: 90%;
       font-size: 14px;
-      padding: 14px;
+      padding: 10.5px;
       justify-content: flex-start;
 
     }
