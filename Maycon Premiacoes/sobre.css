@@ -60,18 +60,19 @@ h2{
 
 /* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
+
+    body{
+        margin: 0;
+    }
     .nav {
         flex-direction: column;
         margin-bottom: 50px;
-        gap: 10px;
-        margin-right: 10px;
-        margin-left: 10px;
     }
 
     .caixa {
         width: 90%; 
         height: auto;
-        margin-top: 20px;
+        margin: 20px auto; /* Centraliza horizontalmente */
     }
 
     h1 {
@@ -111,6 +112,7 @@ h2{
         width: 80%; 
         height: auto;
         margin-top: 40px;
+        margin: 20px auto; /* Centraliza horizontalmente */
         padding: 15px;
     }
 
