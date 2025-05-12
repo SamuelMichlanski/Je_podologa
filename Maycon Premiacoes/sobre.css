@@ -72,7 +72,7 @@ h2{
     .caixa {
         width: 90%; 
         height: auto;
-        margin: 20px auto; /* Centraliza horizontalmente */
+        margin: auto auto; /* Centraliza horizontalmente */
     }
 
     h1 {
@@ -112,7 +112,7 @@ h2{
         width: 80%; 
         height: auto;
         margin-top: 40px;
-        margin: 20px auto; /* Centraliza horizontalmente */
+        margin: auto auto; /* Centraliza horizontalmente */
         padding: 15px;
     }
 
