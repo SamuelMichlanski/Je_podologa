@@ -27,16 +27,17 @@
         <div style="width: 24px;"></div>
     </div>
 
-    <h1>Sobre</h1>
+    <div class="contexto">
+        <h1>Sobre</h1>
+        <p class="pinicio"> Aqui voçê encontrará tudo sobre a plataforma</p>
+    </div>
 
-    <p class="pinicio"> Aqui voçê encontrará tudo sobre a plataforma</p>
-
-    <nav class="nav">
+    <main class="nav">
 
 
         <div class="caixa">
             
-            <h2>Paticipe da Ação Premiada</h2>
+            <h2 class="h2caixas">Paticipe da Ação Premiada</h2>
 
             <p class="pcaixa">
                 🎁 Participe da nossa ação premiada e escolha seu prêmio! Você pode levar para casa um iPhone 16 Pro Max lacrado ou receber R$5.000 via Pix direto na sua conta. Tudo é feito de forma rápida, fácil e segura.  
@@ -46,7 +47,7 @@
 
         <div class="caixa">
 
-            <h2>Benefícios da Plataforma</h2>
+            <h2 class="h2caixas">Benefícios da Plataforma</h2>
 
             <p class="pcaixa">
                 💸 Nossa plataforma oferece números acessíveis para todos, com a lista de participantes sempre visível e atualizada. O pagamento via Pix é rápido e descomplicado, e o sorteio é realizado ao vivo, com total transparência e direito a comprovante.
@@ -56,7 +57,7 @@
 
         <div class="caixa">
 
-            <h2>Confiabilidade e Suporte</h2>
+            <h2 class="h2caixas">Confiabilidade e Suporte</h2>
 
             <p class="pcaixa">
                 🔐 Somos uma plataforma verificada e utilizada por centenas de pessoas em todo o Brasil. Você participa com total segurança e conta com suporte direto da equipe. 🎉 Garanta já seu número e boa sorte — o próximo ganhador pode ser você
@@ -65,22 +66,35 @@
 
         </div>
  
-    </nav>
+    </main>
     
     <div class="divisao">
 
-        <h2>Como posso te ajudar hoje ?</h2>
+        <h2 class="h2final">Como posso te ajudar hoje ?</h2>
 
         <a class="falec" href="contato.html"> Fale Conosco</a>
 
     </div>
         <script>
-
   function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     sidebar.classList.toggle("open");
   }
-        
-    </script>
+
+  document.addEventListener("click", function(event) {
+    const sidebar = document.getElementById("sidebar");
+    const menuButton = document.querySelector(".menu");
+
+    // Se o clique não foi na sidebar nem no botão do menu
+    if (
+      sidebar.classList.contains("open") &&
+      !sidebar.contains(event.target) &&
+      !menuButton.contains(event.target)
+    ) {
+      sidebar.classList.remove("open");
+    }
+  });
+</script>
+
 
     </body>

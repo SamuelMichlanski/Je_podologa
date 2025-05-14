@@ -51,14 +51,27 @@
         <button onclick="window.open('https://www.instagram.com/maycon_premiacoes?igsh=ZDBxdThvYnV4ajdv&utm_source=qr', '_blank')"> <img src="image/instagram.png" alt="">Instagram</button>
     </div>
 
-    <script>
-
+<script>
   function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     sidebar.classList.toggle("open");
   }
-        
-    </script>
+
+  document.addEventListener("click", function(event) {
+    const sidebar = document.getElementById("sidebar");
+    const menuButton = document.querySelector(".menu");
+
+    // Se o clique não foi na sidebar nem no botão do menu
+    if (
+      sidebar.classList.contains("open") &&
+      !sidebar.contains(event.target) &&
+      !menuButton.contains(event.target)
+    ) {
+      sidebar.classList.remove("open");
+    }
+  });
+</script>
+
       
 
     </body>

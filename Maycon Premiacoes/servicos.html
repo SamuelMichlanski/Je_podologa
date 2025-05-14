@@ -27,12 +27,25 @@
     </div>
 
         <script>
-
   function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     sidebar.classList.toggle("open");
   }
-        
-    </script>
+
+  document.addEventListener("click", function(event) {
+    const sidebar = document.getElementById("sidebar");
+    const menuButton = document.querySelector(".menu");
+
+    // Se o clique não foi na sidebar nem no botão do menu
+    if (
+      sidebar.classList.contains("open") &&
+      !sidebar.contains(event.target) &&
+      !menuButton.contains(event.target)
+    ) {
+      sidebar.classList.remove("open");
+    }
+  });
+</script>
+
 
     </body>
