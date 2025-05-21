@@ -74,6 +74,7 @@ h2{
 
     .caixa {
         width: 90%; 
+        padding-bottom: 17px;
         height: auto;
         margin: auto auto; /* Centraliza horizontalmente */
     }
