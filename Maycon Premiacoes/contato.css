@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media (hover: hover) and (pointer: fine) {
+
 
 body{
     font-family: "Montserrat", sans-serif;
@@ -72,7 +72,11 @@ h2{
     transform: scale(1.1);
 }
 
-
+@media (hover: hover) and (pointer: fine) {
+  .redes img:hover {
+    transform: scale(1.1);
+  }
+}
 
 @media (max-width: 600px) {
 
