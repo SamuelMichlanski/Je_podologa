@@ -22,6 +22,8 @@ h1{
     text-align: center;
     padding: 10px;
     border-radius: 10px;
+    text-align: justify;
+    margin-bottom: 40px;
 }
 
 .nav{
@@ -29,4 +31,16 @@ h1{
     display: flex;
     justify-content: center; /* ou: space-between, space-around, space-evenly */
     gap: 20px; /* espaço entre as caixas */
+}
+
+@media (max-width: 768px){
+    .caixa {
+    width: 90%; 
+    padding-bottom: 17px;
+    height: auto;   
+    margin: auto auto;
+    margin-left: 20px;
+    margin-right: 20px;
+     /* Centraliza horizontalmente */
+    }
 }

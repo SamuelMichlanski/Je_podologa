@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@media (hover: hover) and (pointer: fine) {
+
 body{
     font-family: "Montserrat", sans-serif;
 }
@@ -70,8 +72,9 @@ h2{
     transform: scale(1.1);
 }
 
-/* Telas menores que 768px (tablets e celulares em modo retrato) */
-@media (max-width: 768px) {
+
+
+@media (max-width: 600px) {
 
   body {
     padding: 10px;
