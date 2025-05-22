@@ -5,18 +5,18 @@ body {
     padding: 0;
     color: #212121;
     font-family: "Montserrat", sans-serif;
-    background-color: #fff;
+    background-color: #7BE0B5;
 }
 
 /* Moldura da imagem */
 .imagem-moldura {
     margin-top: 110px;
-    width: 140px;
-    height: 140px;
+    width: 125px;
+    height: 125px;
     padding: 5px;
-    background-color: #f83324;
+    background-color: #FAF5EF;
     border-radius: 50%;
-    box-shadow: 0 0 10px #FF6E40;
+    box-shadow: 0 0 10px #ffe8e0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,11 +35,22 @@ body {
 .conteudo {
     text-align: center;
     margin-top: 10px;
+    color: white;
 }
 
 .conteudo p {
     margin: 5px;
     font-weight: 500;
+}
+
+.locsvg {
+    width: 10px;
+    filter: brightness(0) invert(1);
+}
+
+.instasvg {
+    width: 20px;
+    filter: brightness(0) invert(1);
 }
 
 /* Botões */
@@ -49,12 +60,16 @@ body {
     margin: 20px 0;
 }
 
+.botao img{
+    filter: brightness(0) invert(1);
+}
+
 .botao a {
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
-    background-color: #007767;
+    background-color: #0CC0AB;
     color: white;
     padding: 15px 20px;
     width: 350px;
@@ -65,7 +80,7 @@ body {
 }
 
 .botao a:hover {
-    background-color: #005e56;
+    background-color: #7BC4C4;
 }
 
 /* Lado do botão (ícone e espaço vazio) */
