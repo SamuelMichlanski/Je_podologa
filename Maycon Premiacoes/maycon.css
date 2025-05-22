@@ -154,14 +154,6 @@ h1 {
     color 0.3s ease; /* Suaviza a troca de cor */
 }
 
-.iphone a:hover, .insta a:hover, .whatsapp a:hover {
-    background-color: #111; /* Fundo mais claro no hover */
-    transform: scale(1.05); /* Aumenta levemente */
-    box-shadow: 0 0 15px #f83324; /* Sombra intensa */
-    border-color: white; /* Borda branca no hover */
-    color: #f83324; /* Texto vermelho no hover */
-}
-
 .iphone img {
     width: 40px; /* Largura do ícone */
     height: 40px; /* Altura do ícone */
@@ -181,17 +173,32 @@ h1 {
 }
 
 @media (hover: hover) and (pointer: fine) {
+
+    /* === 🎯 Animações do MENU e SIDEBAR === */
+    .menu:hover,
+    .sidebar a:hover {
+        transform: scale(1.1);
+        color: #f83324;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    /* === 🔥 Animações dos BOTÕES (Insta, Whats, iPhone) === */
     .iphone a:hover,
     .insta a:hover,
     .whatsapp a:hover {
-    transform: scale(1.05); /* Aumenta no hover */
-    color: #f83324; /* Texto vermelho */
-    background-color: #111; /* Fundo mais claro */
-    box-shadow: 0 0 15px #f83324; /* Sombra destacada */
-    border-color: white; /* Borda branca */
+        background-color: #111;
+        transform: scale(1.05);
+        box-shadow: 0 0 15px #f83324;
+        border-color: white;
+        color: #f83324;
+        transition: 
+            background-color 0.3s ease,
+            transform 0.3s ease,
+            box-shadow 0.3s ease,
+            border-color 0.3s ease,
+            color 0.3s ease;
     }
 }
-
 @media (hover: hover) and (pointer: fine) {
   .menu:hover,
   .sidebar a:hover {
