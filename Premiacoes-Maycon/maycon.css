@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #ffffff; /* Fundo branco */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos padrão */
+    color: #212121; /* Cor do texto (cinza escuro) */
+    font-family: "Montserrat", sans-serif; /* Fonte padrão */
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+h1 {
+    font-family: "Raleway", sans-serif; /* Fonte dos títulos */
+}
+
+.navbar {
+    position: fixed; /* Fixa no topo */
+    top: 0; /* Alinhado no topo */
+    left: 0; /* Alinhado à esquerda */
+    width: 100%; /* Ocupa toda a largura */
+    height: 90px; /* Altura da navbar */
+    background-color: #000000; /* Fundo preto */
+    display: flex; /* Layout flexível */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaço entre os itens */
+    padding: 0 20px; /* Espaçamento interno nas laterais */
+    z-index: 999; /* Sobrepõe outros elementos */
+    color: #FFFFFF; /* Cor do texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra inferior */
+}
+
+.menu {
+    font-size: 28px; /* Tamanho do ícone */
+    cursor: pointer; /* Cursor de clique */
+    z-index: 2001; /* Sobrepõe tudo */
+    position: fixed; /* Fixo na tela */
+    top: 25px; /* Distância do topo */
+    left: 25px; /* Distância da esquerda */
+    color: #818181; /* Cor cinza */
+}
+
+.sidebar {
+    padding-top: 70px; /* Espaço no topo */
+    height: 100%; /* Altura total da tela */
+    width: 0; /* Começa fechada */
+    position: fixed; /* Fixa na tela */
+    z-index: 1000; /* Camada alta */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Fundo preto */
+    overflow-x: hidden; /* Esconde conteúdo que vazar */
+    transition: width 0.5s ease; /* Animação suave ao abrir */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Sombra na lateral */
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 25px; /* Espaçamento interno */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 25px; /* Tamanho da fonte */
+    color: #818181; /* Cor do texto */
+    display: block; /* Ocupa toda a linha */
+}
+
+.sidebar.open {
+    width: 170px; /* Largura quando aberta */
+}
+
+.titulo {
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100%; /* Ocupa toda a altura */
+    width: 100%; /* Ocupa toda a largura */
+}
+
+.titulo img {
+    height: 300px; /* Altura da imagem */
+    object-fit: contain; /* Mantém proporção sem cortar */
+}
+
+.imagem-moldura {
+    margin-top: 110px; /* Espaçamento superior */
+    width: 140px; /* Largura da moldura */
+    height: 140px; /* Altura da moldura */
+    padding: 5px; /* Espaço interno */
+    background-color: #f83324; /* Cor da borda (vermelha) */
+    border-radius: 50%; /* Formato circular */
+    box-shadow: 0 0 10px #FF6E40; /* Sombra */
+    display: flex; /* Flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+}
+
+.imagem-moldura img {
+    width: 130px; /* Largura da imagem */
+    height: 130px; /* Altura da imagem */
+    border-radius: 50%; /* Deixa circular */
+    object-fit: cover; /* Preenche sem distorcer */
+}
+
+.conteudo {
+    text-align: center; /* Centraliza o texto */
+    font-family: Arial, Helvetica, sans-serif; /* Usa a fonte herdada */
+  text-shadow:
+    -1px -1px 0 rgb(255, 255, 255),
+     1px -1px 0 rgb(255, 255, 255),
+    -1px  1px 0 rgb(255, 255, 255),
+     1px  2px 0 rgb(255, 255, 255);
+}
+
+.clique {
+    font-weight: bold; /* Texto em negrito */
+}
+
+.iphone, .insta, .whatsapp {
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin: 20px 0; /* Espaço acima e abaixo */
+}
+
+.iphone a, .insta a, .whatsapp a {
+    display: flex; /* Flexível */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: flex-start; /* Alinha à esquerda */
+    text-decoration: none; /* Sem sublinhado */
+    background-color: #000; /* Fundo preto */
+    color: white; /* Cor do texto */
+    padding: 20px; /* Espaço interno */
+    width: 500px; /* Largura fixa */
+    max-width: 90%; /* Responsivo, até 90% da tela */
+    border-radius: 90px; /* Cantos arredondados */
+    border: 3px solid #f83324; /* Borda vermelha */
+    font-family: inherit; /* Herda a fonte */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de clique */
+    transition: 
+    background-color 0.3s ease, /* Suaviza a troca de fundo */
+    transform 0.3s ease, /* Suaviza o zoom */
+    box-shadow 0.3s ease, /* Suaviza a sombra */
+    border-color 0.3s ease, /* Suaviza a borda */
+    color 0.3s ease; /* Suaviza a troca de cor */
+}
+
+.iphone img {
+    width: 40px; /* Largura do ícone */
+    height: 40px; /* Altura do ícone */
+    margin-right: 20px; /* Espaço à direita */
+}
+
+.insta img {
+    width: 30px; /* Largura do ícone */
+    height: 30px; /* Altura do ícone */
+    margin-right: 20px; /* Espaço à direita */
+}
+
+.whatsapp img {
+    width: 35px; /* Largura do ícone */
+    height: 35px; /* Altura do ícone */
+    margin-right: 20px; /* Espaço à direita */
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .menu:hover,
+    .sidebar a:hover {
+        transform: scale(1.1);
+        color: #f83324;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .iphone a:hover,
+    .insta a:hover,
+    .whatsapp a:hover {
+        background-color: #111;
+        transform: scale(1.05);
+        box-shadow: 0 0 15px #f83324;
+        border-color: white;
+        color: #f83324;
+        transition: 
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+    }
+}
+@media (hover: hover) and (pointer: fine) {
+  .menu:hover,
+  .sidebar a:hover {
+    transform: scale(1.1);
+    color: #f83324;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+}
+
+@media (max-width: 600px) {
+    .iphone a, .insta a, .whatsapp a {
+    height: 10px; /* Altura reduzida */
+    margin-left: 20px; /* Espaço lateral */
+    margin-right: 20px; /* Espaço lateral */
+    font-size: 15px !important; /* Fonte menor */
+    }
+
+    .iphone img,
+    .insta img,
+    .whatsapp img {
+    width: 28px; /* Ícone menor */
+    height: 28px; /* Ícone menor */
+    }
+}
+
+
+
+
+
+
+
