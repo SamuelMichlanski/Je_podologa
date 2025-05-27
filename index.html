@@ -3,92 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Samuel Michlanski</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="menu">☰</div>
-        <div class="titulo">Portfólio</div>
-        <div style="width: 24px;"></div>
+
+    <div class="menu" onclick="toggleSidebar()">☰</div>
+
+    <div id="sidebar" class="sidebar">    
+       <a href="index.html">Início</a>
+       <a href="contato.html">Contato</a>
+       <a href="servicos.html">Serviços</a>
+       <a href="sobre.html">Sobre</a>
+   </div>
+
+   <div class="navbar">
+    <div class="titulo">
+        <p>Michael Jackson</p>
+    </div>
+    <div style="width: 0px;"></div>
     </div>
 
-    <div class="apresentacao">
-        <h1 class="h1ap">Olá, eu sou o <br>Samuel Michlanski!</h1>
-        <p class="pap">Desenvolvedor Front-End</p>
-    </div>  
+   <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("open");
+    }
 
-    <div class="botoesap">
-        <a href="seu-cv.pdf" class="ddowloadcv" download>Download CV</a>
-        <a href="#contato" class="ccontato">Entrar em contato</a>
-    </div>
+    document.addEventListener("click", function(event) {
+      const sidebar = document.getElementById("sidebar");
+      const menuButton = document.querySelector(".menu");
 
-    <hr>
-    <section class="divisao"> 
-        <h2>Sobre min</h2>
-
-        <p>Me chamo Samuel Michlanski, tenho 15 anos e desde 2024 venho me dedicando ao mundo da Tecnologia da Informação.
-
-        Atualmente, atuo como Menor Aprendiz de TI no GRUPO MSA, onde desenvolvo atividades como controle de atualizações do Windows, formatação e configuração de computadores, instalação de softwares essenciais e suporte básico de hardware, realizando trocas de periféricos como monitores, mouses, teclados e fones.
-
-        Buscando sempre aprimorar meus conhecimentos, possuo formação em HTML5 e CSS3, além de conhecimento intermediário em Word e Excel. Também estudo inglês, com 1 ano de aprendizado na escola Fisk.
-
-        Meu principal objetivo profissional é me tornar um programador, expandindo cada vez mais meus conhecimentos e experiências na área de tecnologia, para construir soluções que gerem impacto e valor.</p>
-
-        <h3>Habilidades</h3>
-
-        <h3>🖥️ Técnicas</h3>
-    <ul>
-        <li>Manutenção e configuração de computadores</li>
-        <li>Controle de atualizações do Windows 10 e 11</li>
-        <li>Instalação de softwares essenciais</li>
-        <li>Suporte básico de hardware (troca de monitores, teclados, mouses e fones)</li>
-        <li>Desenvolvimento web básico (HTML5 e CSS3)</li>
-        <li>Conhecimento intermediário em Word e Excel</li>
-    </ul>
-
-    <h3>🌍 Idiomas</h3>
-    <ul>
-        <li>Inglês: Nível básico/intermediário (1 ano de curso na Fisk)</li>
-    </ul>
-
-    <h3>💼 Profissionais</h3>
-    <ul>
-        <li>Organização e atenção aos detalhes</li>
-        <li>Facilidade em seguir padrões e procedimentos técnicos</li>
-        <li>Aprendizado rápido e adaptação</li>
-        <li>Suporte básico a usuários</li>
-    </ul>
-
-    <h3>🦾 Comportamentais </h3>
-    <ul>
-        <li>Proatividade</li>
-        <li>Responsabilidade</li>
-        <li>Foco em aprendizado constante</li>
-        <li>Facilidade com tecnologia</li>
-    </ul>
-
-    <h2>Projetos</h2>
-
-        <div class="projeto-rifa">
-            <a href="Premiacoes-Maycon/maycon.html" target="_blank">
-                <img class="projeto-rifaimg" src="image/site-rifa.png" alt="">
-            </a>
-            <p>Site desenvolvido para divulgação e venda de rifas online. Nele, você encontra todas as informações sobre a rifa, além de links diretos para o grupo VIP no WhatsApp, perfil no Instagram e a plataforma de compra das rifas de forma prática e segura.</p>
-
-            <p>Clique na imagem para ser redirecionado para o site</p>
-        </div>
-
-        <div class="projeto-mae">
-            <a href="Site Mãe/mae.html" target="_blank">
-                <img class="projeto-maeimg" src="image/site-mae.png" alt="">
-            </a>
-            <p>Site no estilo Linktree, criado para centralizar os principais canais de contato. Nele, você encontra o link direto para o WhatsApp e o perfil no Instagram. O site ainda está em desenvolvimento, mas já facilita a conexão rápida e prática com os clientes.</p>
-        </div>
-
-        <h2>Contatos</h2>
-
-    </section>
-
+      // Se o clique não foi na sidebar nem no botão do menu
+      if (
+        sidebar.classList.contains("open") &&
+        !sidebar.contains(event.target) &&
+        !menuButton.contains(event.target)
+      ) {
+        sidebar.classList.remove("open");
+      }
+    });
+  </script>
+    
 </body>
 </html>
