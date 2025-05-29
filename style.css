@@ -171,6 +171,10 @@ li {
     background-color: #ffffb8;
 }
 
+.preto {
+    color: black;
+}
+
 .titulo-contato {
     width: 100%;
     text-align: center;
@@ -243,5 +247,105 @@ li {
     .ccontato:hover {
         background-color: #3E4B1B; /* Verde escuro */
         transform: scale(1.1);
+    }
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 1024px) {
+    section {
+        padding: 40px 40px;
+    }
+
+    .projeto-rifa,
+    .projeto-mae {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .projeto-rifaimg,
+    .projeto-maeimg {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 30px 20px;
+    }
+
+    .h1ap {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .pap {
+        font-size: 16px;
+    }
+
+    .botoesap {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .ddowloadcv,
+    .ccontato {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 60px; /* Para não ficar atrás da navbar */
+    }
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+
+    .h1ap {
+        font-size: 24px;
+    }
+
+    .pap {
+        font-size: 14px;
+    }
+
+    .botoesap {
+        gap: 10px;
+    }
+
+    .projeto-rifaimg,
+    .projeto-maeimg {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .contato {
+        gap: 30px;
+        padding: 20px 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato-item {
+        width: 100%;
+        max-width: 280px;
+        margin-bottom: 15px;
     }
 }
