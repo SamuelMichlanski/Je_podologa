@@ -5,10 +5,12 @@ body {
     padding: 0;
     color: #212121;
     font-family: "Montserrat", sans-serif;
-    background-color: #7BE0B5;
+    background-image: url('image/imagem-fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* Moldura da imagem */
 .imagem-moldura {
     margin-top: 110px;
     width: 125px;
@@ -31,7 +33,6 @@ body {
     object-fit: cover;
 }
 
-/* Informações */
 .conteudo {
     text-align: center;
     margin-top: 10px;
@@ -53,7 +54,6 @@ body {
     filter: brightness(0) invert(1);
 }
 
-/* Botões */
 .botao {
     display: flex;
     justify-content: center;
@@ -83,7 +83,6 @@ body {
     background-color: #7BC4C4;
 }
 
-/* Lado do botão (ícone e espaço vazio) */
 .lado {
     width: 35px;
     display: flex;
@@ -91,13 +90,11 @@ body {
     align-items: center;
 }
 
-/* Ícones */
 .lado img {
     width: 30px;
     height: 30px;
 }
 
-/* Texto do botão */
 .texto-botao {
     display: flex;
     flex-direction: column;
@@ -114,22 +111,4 @@ body {
     font-size: 12px;
     color: #ccc;
     margin-top: 2px;
-}
-
-/* Responsivo */
-@media (max-width: 600px) {
-    .botao a {
-        width: 70%;
-        padding: 15px;
-        font-size: 15px;
-    }
-
-    .lado {
-        width: 30px;
-    }
-
-    .lado img {
-        width: 28px;
-        height: 28px;
-    }
 }
