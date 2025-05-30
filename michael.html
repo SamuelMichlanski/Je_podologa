@@ -3,47 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Maycon Premiações</title>
+    <link rel="stylesheet" href="michael.css">
+    <link rel="shortcut icon" href="image/Coroa e _M_ Vermelho Distintivos.png" type="image/x-icon">
 </head>
 <body>
-
+    
+    <video class="background-video" autoplay muted loop playsinline>
+      <source src="image/videoip.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos HTML5.
+    </video>
+    
     <div class="menu" onclick="toggleSidebar()">☰</div>
 
-    <div id="sidebar" class="sidebar">    
-       <a href="index.html">Início</a>
-       <a href="contato.html">Contato</a>
-       <a href="servicos.html">Serviços</a>
-       <a href="sobre.html">Sobre</a>
-   </div>
-
-   <div class="navbar">
-    <div class="titulo">
-        <p>Michael Jackson</p>
-    </div>
-    <div style="width: 0px;"></div>
+     <div id="sidebar" class="sidebar">    
+        <a href="#">Primeira Música</a>
+        <a href="#">História do Michael Jackson</a>
+        <a href="#">As 10 músicas mais impactantes<a>
+        <a href="#">Vídeos Ilustrativos</a> 
     </div>
 
-   <script>
-    function toggleSidebar() {
-      const sidebar = document.getElementById("sidebar");
-      sidebar.classList.toggle("open");
-    }
+    <div class="navbar">
+        <div class="titulo">
+            <a href="index.html"><img src="image/logo.pg.png" alt=""></a>
+        </div>
+        <div style="width: 0px;"></div>
+    </div>
 
-    document.addEventListener("click", function(event) {
-      const sidebar = document.getElementById("sidebar");
-      const menuButton = document.querySelector(".menu");
-
-      // Se o clique não foi na sidebar nem no botão do menu
-      if (
-        sidebar.classList.contains("open") &&
-        !sidebar.contains(event.target) &&
-        !menuButton.contains(event.target)
-      ) {
-        sidebar.classList.remove("open");
+        <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("open");
       }
-    });
-  </script>
-    
-</body>
-</html>
+
+      document.addEventListener("click", function(event) {
+        const sidebar = document.getElementById("sidebar");
+        const menuButton = document.querySelector(".menu");
+
+        // Se o clique não foi na sidebar nem no botão do menu
+        if (
+          sidebar.classList.contains("open") &&
+          !sidebar.contains(event.target) &&
+          !menuButton.contains(event.target)
+        ) {
+          sidebar.classList.remove("open");
+        }
+      });
+    </script>
+
+    </body>
