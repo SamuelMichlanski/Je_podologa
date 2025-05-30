@@ -79,10 +79,6 @@ body {
     transition: 0.3s;
 }
 
-.botao a:hover {
-    background-color: #7BC4C4;
-}
-
 .lado {
     width: 35px;
     display: flex;
@@ -112,3 +108,12 @@ body {
     color: #ccc;
     margin-top: 2px;
 }
+
+@media (hover: hover) and (pointer: fine) {
+
+    .botao a:hover {
+    background-color: #7BC4C4;
+}
+    
+}
+
