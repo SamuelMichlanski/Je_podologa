@@ -113,7 +113,7 @@ body {
 @media (hover: hover) and (pointer: fine) {
 
     .botao a:hover {
-    background-color: #7BC4C4;
+    background-color: #7bc4c49c;
 }
     
 }
